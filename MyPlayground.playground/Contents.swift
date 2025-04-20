@@ -117,3 +117,84 @@ enum Planets: Int {
 }
 
 let ear = Planets(rawValue: 2)
+
+/*: Operators and conditions */
+
+//OPERATOR OVERLOADING
+
+let number1 = 44
+let number2 = number1 + 55
+
+//COMPOUND ASSIGNMENT OPERATORS
+var scores1 = 95
+scores1 -= 5
+
+//COMPARISON OPERATOR
+let firstScore = 6
+let secondScore = 4
+
+firstScore == secondScore
+firstScore != secondScore
+
+firstScore < secondScore
+firstScore >= secondScore
+
+//COMBINE CONDITIONS
+let age1 = 12
+let age2 = 21
+
+if age1 > 18 && age2 > 18 {
+    print("Both are over 18")
+}
+
+if age1 > 18 || age2 > 18 {
+    print("At least one is over 18")
+}
+
+//TERNARY OPERATOR - Swift has a ternary operator that combines a check with true and false code blocks.
+let firstCard = 11
+let secondCard = 10
+print(firstCard == secondCard ? "Cards are the same" : "Cards are different")
+
+//SWITCH CASE and fallthrough
+
+let weather = "sunny"
+
+switch weather {
+case "rain":
+    print("Bring an umbrella")
+case "snow":
+    print("Wrap up warm")
+case "sunny":
+    print("Wear sunscreen")
+default:
+    print("Enjoy your day!")
+}
+
+let weatherCondition = "rain"
+
+switch weatherCondition {
+case "rain":
+    print("Bring an umbrella")
+case "snow":
+    print("Wrap up warm")
+case "sunny":
+    print("Wear sunscreen")
+    fallthrough
+default:
+    print("Enjoy your day!")
+}
+
+//RANGE OPERATORS - ..< and ... operators
+
+let fScore = 85
+
+switch fScore {
+case 0..<50:
+    print("You failed badly.")
+case 50..<85:
+    print("You did OK.")
+default:
+    print("You did great!")
+}
+
